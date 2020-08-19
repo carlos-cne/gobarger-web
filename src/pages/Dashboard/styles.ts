@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div``;
 
@@ -31,10 +32,11 @@ export const HeaderContent = styled.div`
   }
 `;
 
-export const Profile = styled.div`
+export const Profile = styled(Link)`
   display: flex;
   align-items: center;
   margin-left: 80px;
+  text-decoration: none;
 
   img {
     width: 56px;
@@ -54,6 +56,11 @@ export const Profile = styled.div`
 
     strong {
       color: #ff9000;
+    }
+  }
+  &:hover {
+    div > strong {
+      opacity: 0.8;
     }
   }
 `;
@@ -158,6 +165,10 @@ export const Section = styled.section`
     display: block;
     padding-bottom: 16px;
     margin-bottom: 16px;
+  }
+
+  > p {
+    color: #999591;
   }
 `;
 
